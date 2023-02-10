@@ -1,0 +1,46 @@
+package com.creeperlwd.testmod;
+
+import net.minecraft.item.Item;
+
+import com.creeperlwd.testmod.lib.ProxyCommon;
+import com.creeperlwd.testmod.lib.References;
+
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
+
+@Mod(modid = References.MODID, version = References.VERSION)
+
+public class TestMod
+{
+	@SidedProxy(clientSide = References.Client, serverSide = References.Common)
+
+	public static ProxyCommon proxy;
+
+	//Items
+	    public static Item GoldBucket = new com.creeperlwd.testmod.items.GoldBucket(1337);
+
+
+	@EventHandler
+    public void init(FMLInitializationEvent event)
+    {
+
+    }
+
+    @EventHandler
+    public void load(FMLInitializationEvent event)
+    {
+    	proxy.registerRenderInformation();
+    }
+    public TestMod(){
+    	//Item registry
+    	    //GameReg
+    	        GameRegistry.registerItem(GoldBucket, "GBucket");
+    	    //LangReg
+    	        LanguageRegistry.addName(GoldBucket, "GBucket");
+    }
+
+}
