@@ -107,7 +107,7 @@ Execute **MainEntry** under src/main where the arguments are set as shown below:
 ```
 Note that we use spoon for java source code structure analysis, but there is a dependency conflict with the relevant code in **tbar**, and the package name where the conflict occurs is the same. So pre-generate the adapted **tbar** as JavaMutator.jar to avoid conflicts.
 
-## List of profile data and optimization options  
+## List of Profile Data and Optimization Options  
 
 ### PrintInlining
 ```
