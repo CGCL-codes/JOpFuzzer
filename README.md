@@ -47,8 +47,9 @@ Users should download the JDK_data and Compiler_data and run the process.py with
 ## Usage of JOpFuzzer
 ### Using Docker Image
 
-Users can download the docker image from the [Google Driver](https://drive.google.com/file/d/1ZHwSZtABvHDhmWkwxMr5_Uz9pgNEPbfy/view). All the necessary evaluation environments have been set up.
+Users can pull the docker image from the docker hub. All the necessary evaluation environments have been set up.
 ```
+# docker pull hustcamel/jopfuzzer:latest
 # docker import JOpFuzzer-docker.tar # This process may take a few minutes depending on the machine performance. When the process finishes, the image ID will show on the screen.
 # docker run -it [image ID] /bin/bash
 # cd root/JOpFuzzer-demo
