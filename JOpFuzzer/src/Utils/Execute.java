@@ -5,15 +5,14 @@ import java.io.*;
 public class Execute {
     public static int execute(String cmd) throws IOException {
         String osName = System.getProperty("os.name");
-//
-//        String[] command;
-//        if (osName.toLowerCase().contains("windows")) {
-//            command = new String[]{"cmd", "/C", cmd + " 2>&1"};
-//        } else {
-//            command = new String[]{"/bin/sh", "-c", cmd + " 2>&1"};
-//        }
-//        Process p = Runtime.getRuntime().exec(command);
-        Process p = Runtime.getRuntime().exec(cmd);
+        String[] command;
+        if (osName.toLowerCase().contains("windows")) {
+            command = new String[]{"cmd", "/C", cmd + " 2>&1"};
+        } else {
+            command = new String[]{"/bin/sh", "-c", cmd + " 2>&1"};
+        }
+        Process p = Runtime.getRuntime().exec(command);
+//        Process p = Runtime.getRuntime().exec(cmd);
         InputStream fis = p.getInputStream();
         InputStreamReader isr = new InputStreamReader(fis);
 
