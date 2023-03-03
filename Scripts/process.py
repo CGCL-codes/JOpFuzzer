@@ -395,16 +395,16 @@ def draw_priorty():
 
 def gethelp():
     para = ('   --priorty       get distribution of priorty\n'
-            '   --duration      get distribugtion of duration\n'
-            '   --resolution    get distribugtion of resolution\n'
-            '   --pd            get distribugtion of between priorty and duration day \n'
-            '   --duplicate     get distribugtion of duplicate \n'
-            '   --fixratio      get distribugtion of fix ratio \n'
-            '   --changefile    get distribugtion of changed file number \n'
-            '   --deleline      get distribugtion of deleted line number \n'
-            '   --insline       get distribugtion of inserted line number \n'
-            '   --affectversion get distribugtion of affected versions number \n'
-            '   --comment       get distribugtion of comment number \n'
+            '   --duration      get distribution of duration\n'
+            '   --resolution    get distribution of resolution\n'
+            '   --pd            get distribution of between priorty and duration day \n'
+            '   --duplicate     get distribution of duplicate \n'
+            '   --fixratio      get distribution of fix ratio \n'
+            '   --changefile    get distribution of changed file number \n'
+            '   --deleline      get distribution of deleted line number \n'
+            '   --insline       get distribution of inserted line number \n'
+            '   --affectversion get distribution of affected versions number \n'
+            '   --comment       get distribution of comment number \n'
             '   --total         get Trend graph of totalnum and proportion\n')
     print(para)
 
